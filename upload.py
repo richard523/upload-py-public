@@ -46,7 +46,7 @@ def upload_to_db(imgurl, prompt, name, timesent, providerAccountId):
             )
             mycursor = mydb.cursor()
             sql = f"""INSERT INTO Generation (id, imgurl, prompt, name, timesent, providerAccountId) 
-            VALUES (\"{random.randint(0,10000000000)}\", \"{imgurl}\", \"{prompt}\", \"ANON_NAME\", \"{timesent}\", \"ANON_ID\")"""
+            VALUES (\"{random.randint(0,10000000000)}\", \"{imgurl}\", \"{prompt}\", \"{ANON_NAME}\", \"{timesent}\", \"{ANON_ID}\")"""
             mycursor.execute(sql)
             mydb.commit()
             print(mycursor.rowcount, "record inserted.")
